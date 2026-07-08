@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+// import { ArrowRight } from "lucide-react";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { SocialLink } from "@/data/content";
 
@@ -42,17 +42,17 @@ export function ContactSection({ socials }: ContactSectionProps) {
             })}
           </motion.div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-3">
+          {/* <div className="mt-10 flex flex-wrap items-center gap-3">
             <a
               href="mailto:hello@example.com"
               className="inline-flex items-center rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
             >
               Start a conversation <ArrowRight className="ml-2 h-4 w-4" />
             </a>
-            {/* <p className="text-sm text-slate-400">
+            <p className="text-sm text-slate-400">
               Open to freelance, collaboration, and ambitious projects.
-            </p> */}
-          </div>
+            </p>
+          </div> */}
         </div>
       </div>
     </section>

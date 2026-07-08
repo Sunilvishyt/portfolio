@@ -1,5 +1,5 @@
 import type { ComponentType } from "react";
-import { Mail } from "lucide-react";
+// import { Mail } from "lucide-react";
 import {
   GithubLogoIcon,
   InstagramLogoIcon,

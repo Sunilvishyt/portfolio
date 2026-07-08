@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Trophy } from "lucide-react";
-import { SectionHeading } from "@/components/ui/section-heading";
+// import { SectionHeading } from "@/components/ui/section-heading";
 import type { Achievement } from "@/data/content";
 import ShinyText from "../ui/shiny-text";
 

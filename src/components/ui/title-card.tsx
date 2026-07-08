@@ -56,10 +56,17 @@ export default function TiltedCard({
   // Dynamic light source/glow tracking
   const glowX = useMotionValue(0);
   const glowY = useMotionValue(0);
-  const glowBg = useTransform(
-    [glowX, glowY, opacity],
-    ([gx, gy, op]) =>
-      `radial-gradient(circle 180px at ${gx}px ${gy}px, rgba(255, 255, 255, 0.25), transparent 80%)`,
+  const glowBg = useTransform([glowX, glowY, opacity], (latestValues) => {
+    const [gx, gy, _opacity] = latestValues as [number, number, number];
+    return `radial-gradient(circle 180px at ${gx}px ${gy}px, rgba(255, 255, 255, 0.25), transparent 80%)`;
+  });
+
+  const boxShadow = useTransform(
+    [shadowBlur, shadowOpacity],
+    (latestValues) => {
+      const [blur, op] = latestValues as [number, number];
+      return `0px ${blur}px ${blur * 1.2}px rgba(0, 0, 0, ${op}), 0px 4px 10px rgba(0,0,0,0.1)`;
+    },
   );
 
   const rotateFigcaption = useSpring(0, {
@@ -141,11 +148,7 @@ export default function TiltedCard({
           rotateX,
           rotateY,
           scale,
-          boxShadow: useTransform(
-            [shadowBlur, shadowOpacity],
-            ([blur, op]) =>
-              `0px ${blur}px ${blur * 1.2}px rgba(0, 0, 0, ${op}), 0px 4px 10px rgba(0,0,0,0.1)`,
-          ),
+          boxShadow,
         }}
       >
         {/* Border Highlighting Ring */}

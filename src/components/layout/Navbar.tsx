@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import { Moon, Sun } from "lucide-react";
+// import { Moon, Sun } from "lucide-react";
 import type { NavLink } from "@/data/content";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 
 interface NavbarProps {
   navLinks: NavLink[];
   theme: "dark" | "light";
   onToggleTheme: () => void;
 }
-
-export function Navbar({ navLinks, theme, onToggleTheme }: NavbarProps) {
+// add theme, onToggleTheme
+export function Navbar({ navLinks }: NavbarProps) {
   return (
     <motion.header
       initial={{ y: -24, opacity: 0 }}

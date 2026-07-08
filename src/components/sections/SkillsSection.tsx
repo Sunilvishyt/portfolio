@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { SectionHeading } from "@/components/ui/section-heading";
+// import { SectionHeading } from "@/components/ui/section-heading";
 import type { SkillGroup } from "@/data/content";
 import ShinyText from "../ui/shiny-text";
 
