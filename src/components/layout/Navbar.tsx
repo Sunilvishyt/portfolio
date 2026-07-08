@@ -36,7 +36,7 @@ export function Navbar({ navLinks, theme, onToggleTheme }: NavbarProps) {
           ))}
         </nav>
 
-        <Button
+        {/* <Button
           variant="ghost"
           size="icon"
           onClick={onToggleTheme}
@@ -47,7 +47,7 @@ export function Navbar({ navLinks, theme, onToggleTheme }: NavbarProps) {
           ) : (
             <Moon className="h-4 w-4" />
           )}
-        </Button>
+        </Button> */}
       </div>
     </motion.header>
   );

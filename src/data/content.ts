@@ -53,18 +53,18 @@ export const navLinks: NavLink[] = [
 
 export const heroContent = {
   name: "Sunil Vishwakarma",
-  role: "Full-stack developer crafting thoughtful digital experiences",
-  location: "Based in India",
-  intro:
-    "I build polished web applications with React, Next.js, FastAPI, and Node.js, blending product thinking with strong engineering habits.",
+  role: "Full-Stack Developer | React.js, Next.js & FastAPI | Building AI-Driven Applications & Scalable Web Systems",
+  location: "Based in Jabalpur, India",
+  intro: "",
 };
 
 export const aboutContent: AboutContent = {
-  intro:
-    "I’m a developer who enjoys turning ambitious ideas into reliable products. My work sits at the intersection of product experience, scalable systems, and AI-driven features.",
+  intro: `I am a Full-Stack Developer with a Master of Computer Applications (MCA), dedicated to building scalable web systems and AI-powered applications.
+  From architecting responsive frontend interfaces to engineering resilient backends and integrating RAG-based GenAI features, I love tackling complex technical challenges. I bring a strong foundation in Data Structures & Algorithms and a passion for performance to every line of code.
+
+  Currently deepening my expertise in System Design, DevOps, and advanced GenAI patterns to build low-latency, production-ready software.`,
   bullets: [
     "Hands-on experience building end-to-end applications using modern React and backend frameworks.",
-    "Comfortable connecting frontend interfaces to resilient APIs, databases, and deployment workflows.",
     "Growing interest in AI products, automation, and intelligent user experiences.",
   ],
 };
@@ -126,34 +126,51 @@ export const projects: Project[] = [
     title: "DocuMindAI",
     description:
       "A real-time RAG-based document assistant that lets users ask questions across uploaded PDFs and documents using semantic retrieval.",
-    stack: ["Next.js", "FastAPI", "LangChain", "Vector Search"],
+    stack: [
+      "Next.js",
+      "FastAPI",
+      "LangChain",
+      "Vector Database",
+      "Vector Search",
+    ],
     links: {
-      github: "https://github.com",
+      github: "https://github.com/Sunilvishyt/DocuMind-AI",
     },
   },
   {
     title: "VibeTube",
     description:
       "A minimal video-sharing platform featuring auth, subscriptions, comments, uploads, and a personalized feed experience.",
-    stack: ["React", "FastAPI", "PostgreSQL", "SQLAlchemy"],
+    stack: [
+      "React",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "Supabase",
+      "Docker",
+      "framer-motion",
+    ],
     links: {
-      github: "https://github.com",
-      demo: "https://example.com",
+      github: "https://github.com/Sunilvishyt/vibetube/",
+      demo: "https://vibetubefrontend.vercel.app/",
     },
   },
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: "GitHub", href: "https://github.com", icon: GithubLogoIcon },
+  {
+    label: "GitHub",
+    href: "https://github.com/Sunilvishyt/",
+    icon: GithubLogoIcon,
+  },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com",
+    href: "https://www.linkedin.com/in/sunilvishwakarma3603/",
     icon: LinkedinLogoIcon,
   },
-  { label: "Email", href: "mailto:hello@example.com", icon: Mail },
   {
     label: "Instagram",
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/sunil_vishwakarma.pmdc",
     icon: InstagramLogoIcon,
   },
 ];

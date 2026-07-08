@@ -10,7 +10,7 @@ interface ContactSectionProps {
 export function ContactSection({ socials }: ContactSectionProps) {
   return (
     <section id="contact" className="px-6 py-24 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <div className="rounded-[2rem] border border-cyan-400/20 bg-linear-to-br from-cyan-500/15 via-slate-950 to-blue-500/10 p-8 shadow-2xl shadow-cyan-950/20 sm:p-10 lg:p-12">
           <SectionHeading
             eyebrow="Get in touch"
@@ -49,9 +49,9 @@ export function ContactSection({ socials }: ContactSectionProps) {
             >
               Start a conversation <ArrowRight className="ml-2 h-4 w-4" />
             </a>
-            <p className="text-sm text-slate-400">
+            {/* <p className="text-sm text-slate-400">
               Open to freelance, collaboration, and ambitious projects.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>

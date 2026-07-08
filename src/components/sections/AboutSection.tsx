@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { Cpu, Sparkles } from "lucide-react";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { Sparkles } from "lucide-react";
 import type { AboutContent } from "@/data/content";
-
+import ShinyText from "../ui/shiny-text";
+import TiltedCard from "../ui/title-card";
 interface AboutSectionProps {
   content: AboutContent;
 }
@@ -11,21 +11,28 @@ export function AboutSection({ content }: AboutSectionProps) {
   return (
     <section id="about" className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="About"
+        {/* <SectionHeading
+          eyebrow="Abodfdfut"
           title="Designing useful products with clarity and craft"
           description="I enjoy moving from idea to product, creating interfaces that feel fast and backend systems that remain dependable under real use."
-        />
+        /> */}
 
-        <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="flex justify-center">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
+            <ShinyText text="About" className="mx-3" />
+            <ShinyText text="Me" color="#00A6C2" />
+          </h1>
+        </div>
+
+        <div className="grid px-15 gap-8 lg:grid-cols-[1.15fr_0.85fr]">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-sm backdrop-blur dark:border-slate-800/70 dark:bg-slate-900/70"
+            className="rounded-3xl w-200 border border-slate-200/70 bg-white/80 p-8 shadow-sm backdrop-blur dark:border-slate-800/70 dark:bg-slate-900/70"
           >
-            <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">
+            <p className="text-lg leading-8 text-white dark:text-slate-300">
               {content.intro}
             </p>
             <div className="mt-6 space-y-4">
@@ -42,8 +49,7 @@ export function AboutSection({ content }: AboutSectionProps) {
               ))}
             </div>
           </motion.div>
-
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -67,7 +73,26 @@ export function AboutSection({ content }: AboutSectionProps) {
                 into user journeys.
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
+          <div className="flex justify-center ">
+            <TiltedCard
+              imageSrc="pic.png"
+              altText=""
+              captionText="Sunil Vishwakarma"
+              containerHeight="300px"
+              containerWidth="300px"
+              imageHeight="400px"
+              imageWidth="200px"
+              rotateAmplitude={12}
+              scaleOnHover={1.05}
+              showMobileWarning={false}
+              showTooltip
+              displayOverlayContent
+              overlayContent={
+                <p className="tilted-card-demo-text">FOSS HACK</p>
+              }
+            />
+          </div>
         </div>
       </div>
     </section>

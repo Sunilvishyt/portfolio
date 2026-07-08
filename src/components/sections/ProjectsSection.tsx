@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Code2, PlayCircle } from "lucide-react";
-import { SectionHeading } from "@/components/ui/section-heading";
 import type { Project } from "@/data/content";
+import ShinyText from "../ui/shiny-text";
 
 interface ProjectsSectionProps {
   projects: Project[];
@@ -10,12 +10,23 @@ interface ProjectsSectionProps {
 export function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <section id="projects" className="px-6 py-24 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading
+      <div className="mx-auto max-w-6xl">
+        {/* <SectionHeading
           eyebrow="Projects"
           title="Recent builds with impact and personality"
           description="These projects reflect my approach to product development: useful features, thoughtful UX, and a backend that stays practical and scalable."
-        />
+        /> */}
+        <div className="flex justify-center">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
+            <ShinyText text="Projects" className="mx-3" />
+            {/* <ShinyText text="Me" color="#00A6C2" /> */}
+          </h1>
+        </div>
+        <p className="flex justify-center text-xl mb-10">
+          These projects reflect my approach to product development: useful
+          features, thoughtful UX, and a backend that stays practical and
+          scalable.
+        </p>
 
         <div className="grid gap-8 lg:grid-cols-2">
           {projects.map((project, index) => (

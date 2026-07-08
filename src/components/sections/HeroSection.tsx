@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin } from "lucide-react";
+// import { ParticleText } from "../ui/name-title";
+import ShinyText from "../ui/shiny-text";
+import ShimmerButton from "../ui/shimmer-button";
 
 interface HeroContent {
   name: string;
@@ -41,16 +44,19 @@ export function HeroSection({ content }: HeroSectionProps) {
         />
       </div>
 
-      <div className="mx-auto flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-center ">
+      <div className="mx-auto flex flex-col gap-12 lg:flex-row items-center justify-center">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="max-w-3xl"
         >
-          <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-            <span className="text-cyan-400">{content.name}</span>
-          </h1>
+          {/* <ParticleText text="Sunil Vishwakarma" /> */}
+          <ShinyText
+            text="Sunil Vishwakarma"
+            className="text-6xl font-extrabold "
+            color="#00a9f5"
+          />
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300 sm:text-xl">
             {content.role}
@@ -71,12 +77,13 @@ export function HeroSection({ content }: HeroSectionProps) {
             >
               View projects <ArrowRight className="ml-2 h-4 w-4" />
             </a>
-            <a
+            <ShimmerButton text="Download Resume" />
+            {/* <a
               href="#contact"
               className="inline-flex items-center justify-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-cyan-400 hover:text-cyan-500 dark:border-slate-700 dark:text-slate-200"
             >
-              Get in touch
-            </a>
+              Download Resume
+            </a> */}
           </div>
         </motion.div>
         {/* <motion.div

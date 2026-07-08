@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/section-heading";
 import type { SkillGroup } from "@/data/content";
+import ShinyText from "../ui/shiny-text";
 
 interface SkillsSectionProps {
   skillGroups: SkillGroup[];
@@ -9,12 +10,23 @@ interface SkillsSectionProps {
 export function SkillsSection({ skillGroups }: SkillsSectionProps) {
   return (
     <section id="skills" className="px-6 py-24 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading
+      <div className="mx-auto max-w-6xl">
+        {/* <SectionHeading
           eyebrow="Skills"
           title="A blend of product thinking and engineering depth"
           description="The stack I use most often is focused on building modern products quickly while keeping the backend foundation reliable."
-        />
+        /> */}
+        <div className="flex justify-center">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
+            {/* <ShinyText text="About" className="mx-3" /> */}
+            <ShinyText text="Skills" color="#00A6C2" />
+          </h1>
+        </div>
+
+        <p className="flex justify-center text-xl mb-10">
+          A comprehensive overview of my technical expertise and the
+          technologies I work with to build modern applications.
+        </p>
 
         <div className="grid gap-6 md:grid-cols-2">
           {skillGroups.map((group, index) => (
