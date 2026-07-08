@@ -9,8 +9,8 @@ interface AboutSectionProps {
 
 export function AboutSection({ content }: AboutSectionProps) {
   return (
-    <section id="about" className="px-6 py-24 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="about" className=" py-35 lg:px-8">
+      <div className="mx-auto max-w-6xl">
         {/* <SectionHeading
           eyebrow="Abodfdfut"
           title="Designing useful products with clarity and craft"
@@ -24,13 +24,13 @@ export function AboutSection({ content }: AboutSectionProps) {
           </h1>
         </div>
 
-        <div className="grid px-15 gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="flex flex-col lg:flex-row">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl w-200 border border-slate-200/70 bg-white/80 p-8 shadow-sm backdrop-blur dark:border-slate-800/70 dark:bg-slate-900/70"
+            className="rounded-3xl border border-slate-200/70 bg-white/80 p-8 shadow-sm backdrop-blur dark:border-slate-800/70 dark:bg-slate-900/70"
           >
             <p className="text-lg leading-8 text-white dark:text-slate-300">
               {content.intro}

@@ -49,7 +49,7 @@ function App() {
 
   return (
     <ReactLenis root options={lenisOptions}>
-      <div className="min-h-screen bg-background text-foreground transition-colors duration-500">
+      <div className="min-h-screen bg-background text-foreground transition-colors duration-600">
         <Navbar
           navLinks={navLinks}
           theme={theme}
@@ -60,11 +60,13 @@ function App() {
         <main>
           <BackgroundPaths />
           {/* <HeroSection content={heroContent} /> */}
-          <AboutSection content={aboutContent} />
-          <SkillsSection skillGroups={skillGroups} />
-          <AchievementsSection achievements={achievements} />
-          <ProjectsSection projects={projects} />
-          <ContactSection socials={socialLinks} />
+          <section className="px-5">
+            <AboutSection content={aboutContent} />
+            <SkillsSection skillGroups={skillGroups} />
+            <AchievementsSection achievements={achievements} />
+            <ProjectsSection projects={projects} />
+            <ContactSection socials={socialLinks} />
+          </section>
         </main>
       </div>
     </ReactLenis>

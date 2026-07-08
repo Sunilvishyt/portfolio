@@ -12,7 +12,7 @@ export function AchievementsSection({
   achievements,
 }: AchievementsSectionProps) {
   return (
-    <section className="px-6 py-24 lg:px-8">
+    <section className=" py-24 lg:px-8">
       <div className="mx-auto max-w-6xl">
         {/* <SectionHeading
           eyebrow="Achievements"

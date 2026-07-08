@@ -9,7 +9,7 @@ interface SkillsSectionProps {
 
 export function SkillsSection({ skillGroups }: SkillsSectionProps) {
   return (
-    <section id="skills" className="px-6 py-24 lg:px-8">
+    <section id="skills" className="py-35 lg:px-8">
       <div className="mx-auto max-w-6xl">
         {/* <SectionHeading
           eyebrow="Skills"

@@ -88,11 +88,13 @@ export function BackgroundPaths() {
               <ShinyText text="Sunil Vishwakarma" />
             </h1>
 
-            <div className="flex justify-center">
-              <p className="text-xl w-160">{heroContent.role}</p>
+            <div className="flex justify-center px-4">
+              <p className="text-xl max-w-2xl break-words">
+                {heroContent.role}
+              </p>
             </div>
 
-            <div className="flex justify-center items-center">
+            <div className="flex flex-col-reverse lg:flex-row justify-center items-center">
               <div
                 className="inline-block group relative mt-8 bg-gradient-to-b from-black/10 to-white/10 
                         dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg 

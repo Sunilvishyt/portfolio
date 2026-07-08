@@ -9,7 +9,7 @@ interface ProjectsSectionProps {
 
 export function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
-    <section id="projects" className="px-6 py-24 lg:px-8">
+    <section id="projects" className=" py-30 lg:px-8">
       <div className="mx-auto max-w-6xl">
         {/* <SectionHeading
           eyebrow="Projects"

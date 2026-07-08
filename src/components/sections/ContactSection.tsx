@@ -9,7 +9,7 @@ interface ContactSectionProps {
 
 export function ContactSection({ socials }: ContactSectionProps) {
   return (
-    <section id="contact" className="px-6 py-24 lg:px-8">
+    <section id="contact" className=" py-24 lg:px-8">
       <div className="mx-auto max-w-6xl">
         <div className="rounded-[2rem] border border-cyan-400/20 bg-linear-to-br from-cyan-500/15 via-slate-950 to-blue-500/10 p-8 shadow-2xl shadow-cyan-950/20 sm:p-10 lg:p-12">
           <SectionHeading
