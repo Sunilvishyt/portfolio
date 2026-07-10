@@ -19,20 +19,20 @@ import { BackgroundPaths } from "./components/ui/background-paths";
 
 function App() {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
-    if (typeof window === "undefined") {
-      return "dark";
-    }
+    // if (typeof window === "undefined") {
+    return "dark";
+    // }
 
-    const storedTheme = window.localStorage.getItem("portfolio-theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
+    // const storedTheme = window.localStorage.getItem("portfolio-theme");
+    // const prefersDark = window.matchMedia(
+    //   "(prefers-color-scheme: dark)",
+    // ).matches;
 
-    return storedTheme === "light" || storedTheme === "dark"
-      ? storedTheme
-      : prefersDark
-        ? "dark"
-        : "light";
+    // return storedTheme === "light" || storedTheme === "dark"
+    //   ? storedTheme
+    //   : prefersDark
+    //     ? "dark"
+    //     : "light";
   });
 
   const lenisOptions = {
