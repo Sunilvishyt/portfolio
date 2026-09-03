@@ -1,10 +1,17 @@
+import { Suspense, lazy } from "react";
 import { useEffect, useState } from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { AchievementsSection } from "@/components/sections/AchievementsSection";
-import { ContactSection } from "@/components/sections/ContactSection";
-import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { SkillsSection } from "@/components/sections/SkillsSection";
+const Navbar = lazy(() => import("@/components/layout/Navbar"));
+const AboutSection = lazy(() => import("@/components/sections/AboutSection"));
+const AchievementsSection = lazy(
+  () => import("@/components/sections/AchievementsSection"),
+);
+const ContactSection = lazy(
+  () => import("@/components/sections/ContactSection"),
+);
+const ProjectsSection = lazy(
+  () => import("@/components/sections/ProjectsSection"),
+);
+const SkillsSection = lazy(() => import("@/components/sections/SkillsSection"));
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "lenis/react";
 import {
@@ -48,28 +55,38 @@ function App() {
   }, [theme]);
 
   return (
-    <ReactLenis root options={lenisOptions}>
-      <div className="min-h-screen bg-background text-foreground transition-colors duration-600">
-        <Navbar
-          navLinks={navLinks}
-          theme={theme}
-          onToggleTheme={() =>
-            setTheme((current) => (current === "dark" ? "light" : "dark"))
-          }
-        />
-        <main>
-          <BackgroundPaths />
-          {/* <HeroSection content={heroContent} /> */}
-          <section className="px-5">
-            <AboutSection content={aboutContent} />
-            <SkillsSection skillGroups={skillGroups} />
-            <AchievementsSection achievements={achievements} />
-            <ProjectsSection projects={projects} />
-            <ContactSection socials={socialLinks} />
-          </section>
-        </main>
-      </div>
-    </ReactLenis>
+    //add spinner loading in suspence fallback
+
+    <Suspense
+      fallback={
+        <div className="flex items-center justify-center h-screen">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        </div>
+      }
+    >
+      <ReactLenis root options={lenisOptions}>
+        <div className="min-h-screen bg-background text-foreground transition-colors duration-600">
+          <Navbar
+            navLinks={navLinks}
+            theme={theme}
+            onToggleTheme={() =>
+              setTheme((current) => (current === "dark" ? "light" : "dark"))
+            }
+          />
+          <main>
+            <BackgroundPaths />
+
+            <section className="px-5">
+              <AboutSection content={aboutContent} />
+              <SkillsSection skillGroups={skillGroups} />
+              <AchievementsSection achievements={achievements} />
+              <ProjectsSection projects={projects} />
+              <ContactSection socials={socialLinks} />
+            </section>
+          </main>
+        </div>
+      </ReactLenis>
+    </Suspense>
   );
 }
 

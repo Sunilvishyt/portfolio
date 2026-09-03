@@ -8,7 +8,7 @@ interface AchievementsSectionProps {
   achievements: Achievement[];
 }
 
-export function AchievementsSection({
+export default function AchievementsSection({
   achievements,
 }: AchievementsSectionProps) {
   return (

@@ -9,7 +9,7 @@ interface NavbarProps {
   onToggleTheme: () => void;
 }
 // add theme, onToggleTheme
-export function Navbar({ navLinks }: NavbarProps) {
+export default function Navbar({ navLinks }: NavbarProps) {
   return (
     <motion.header
       initial={{ y: -24, opacity: 0 }}
@@ -29,25 +29,12 @@ export function Navbar({ navLinks }: NavbarProps) {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-slate-600 transition hover:text-cyan-500 dark:text-slate-300"
+              className="text-md font-medium text-slate-600 transition hover:text-cyan-500 dark:text-slate-300"
             >
               {link.label}
             </a>
           ))}
         </nav>
-
-        {/* <Button
-          variant="ghost"
-          size="icon"
-          onClick={onToggleTheme}
-          className="rounded-full"
-        >
-          {theme === "dark" ? (
-            <Sun className="h-4 w-4" />
-          ) : (
-            <Moon className="h-4 w-4" />
-          )}
-        </Button> */}
       </div>
     </motion.header>
   );

@@ -7,18 +7,12 @@ interface SkillsSectionProps {
   skillGroups: SkillGroup[];
 }
 
-export function SkillsSection({ skillGroups }: SkillsSectionProps) {
+export default function SkillsSection({ skillGroups }: SkillsSectionProps) {
   return (
     <section id="skills" className="py-35 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        {/* <SectionHeading
-          eyebrow="Skills"
-          title="A blend of product thinking and engineering depth"
-          description="The stack I use most often is focused on building modern products quickly while keeping the backend foundation reliable."
-        /> */}
         <div className="flex justify-center">
           <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
-            {/* <ShinyText text="About" className="mx-3" /> */}
             <ShinyText text="Skills" color="#00A6C2" />
           </h1>
         </div>
@@ -43,7 +37,7 @@ export function SkillsSection({ skillGroups }: SkillsSectionProps) {
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-600 dark:text-cyan-300"
+                    className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-sm text-cyan-600 dark:text-cyan-300"
                   >
                     {item}
                   </span>

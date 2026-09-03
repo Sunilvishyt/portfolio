@@ -7,7 +7,7 @@ interface AboutSectionProps {
   content: AboutContent;
 }
 
-export function AboutSection({ content }: AboutSectionProps) {
+export default function AboutSection({ content }: AboutSectionProps) {
   return (
     <section id="about" className=" py-35 lg:px-8">
       <div className="mx-auto max-w-6xl">
@@ -49,31 +49,6 @@ export function AboutSection({ content }: AboutSectionProps) {
               ))}
             </div>
           </motion.div>
-          {/* <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="rounded-3xl border border-cyan-400/20 bg-linear-to-br from-cyan-500/15 via-slate-950 to-blue-500/10 p-8 shadow-lg"
-          >
-            <div className="flex items-center gap-3 text-cyan-400">
-              <Cpu className="h-5 w-5" />
-              <p className="text-sm font-semibold uppercase tracking-[0.25em]">
-                What I enjoy building
-              </p>
-            </div>
-            <div className="mt-6 space-y-4 text-sm leading-7 text-slate-200">
-              <p>Modern interfaces that feel intuitive from the first click.</p>
-              <p>
-                Reliable APIs and backend orchestration that support real
-                product use cases.
-              </p>
-              <p>
-                AI features that feel useful, fast, and thoughtfully integrated
-                into user journeys.
-              </p>
-            </div>
-          </motion.div> */}
           <div className="flex justify-center ">
             <TiltedCard
               imageSrc="pic.png"

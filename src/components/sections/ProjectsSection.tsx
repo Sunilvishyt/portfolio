@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, Code2, PlayCircle } from "lucide-react";
+import { Code2, PlayCircle } from "lucide-react";
 import type { Project } from "@/data/content";
 import ShinyText from "../ui/shiny-text";
 
@@ -7,19 +7,13 @@ interface ProjectsSectionProps {
   projects: Project[];
 }
 
-export function ProjectsSection({ projects }: ProjectsSectionProps) {
+export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <section id="projects" className=" py-30 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        {/* <SectionHeading
-          eyebrow="Projects"
-          title="Recent builds with impact and personality"
-          description="These projects reflect my approach to product development: useful features, thoughtful UX, and a backend that stays practical and scalable."
-        /> */}
         <div className="flex justify-center">
           <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tighter">
             <ShinyText text="Projects" className="mx-3" />
-            {/* <ShinyText text="Me" color="#00A6C2" /> */}
           </h1>
         </div>
         <p className="flex justify-center text-xl mb-10">
@@ -40,12 +34,9 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
             >
               <div className="flex items-center justify-between">
                 <h3 className="text-2xl font-semibold">{project.title}</h3>
-                <div className="rounded-full border border-cyan-400/20 bg-cyan-400/10 p-2 text-cyan-500">
-                  <ArrowUpRight className="h-4 w-4" />
-                </div>
               </div>
 
-              <p className="mt-4 text-sm leading-7 text-slate-600 dark:text-slate-300">
+              <p className="mt-4 text-md leading-7 text-slate-600 dark:text-slate-300">
                 {project.description}
               </p>
 
@@ -53,7 +44,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300"
+                    className="rounded-full bg-slate-100 px-3 py-1 text-md font-medium text-slate-600 dark:bg-slate-800 dark:text-slate-300"
                   >
                     {tech}
                   </span>

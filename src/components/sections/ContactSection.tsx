@@ -7,7 +7,7 @@ interface ContactSectionProps {
   socials: SocialLink[];
 }
 
-export function ContactSection({ socials }: ContactSectionProps) {
+export default function ContactSection({ socials }: ContactSectionProps) {
   return (
     <section id="contact" className=" py-24 lg:px-8">
       <div className="mx-auto max-w-6xl">
@@ -33,7 +33,7 @@ export function ContactSection({ socials }: ContactSectionProps) {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center rounded-full border border-slate-700/70 bg-slate-950/50 px-4 py-2 text-sm font-medium text-slate-100 transition hover:bg-slate-800"
+                  className="inline-flex items-center rounded-full border border-slate-700/70 bg-slate-950/50 px-4 py-2 text-md font-medium text-slate-100 transition hover:bg-slate-800"
                 >
                   <Icon className="mr-2 h-4 w-4" />
                   {social.label}
@@ -41,18 +41,6 @@ export function ContactSection({ socials }: ContactSectionProps) {
               );
             })}
           </motion.div>
-
-          {/* <div className="mt-10 flex flex-wrap items-center gap-3">
-            <a
-              href="mailto:hello@example.com"
-              className="inline-flex items-center rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400"
-            >
-              Start a conversation <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-            <p className="text-sm text-slate-400">
-              Open to freelance, collaboration, and ambitious projects.
-            </p>
-          </div> */}
         </div>
       </div>
     </section>

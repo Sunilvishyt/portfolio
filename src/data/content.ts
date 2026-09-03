@@ -96,7 +96,7 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     title: "Tools & Databases",
-    items: ["Git", "GitHub", "PostgreSQL", "MongoDB", "Docker"],
+    items: ["Git", "GitHub", "PostgreSQL", "MongoDB", "Redis", "Docker"],
   },
 ];
 
@@ -135,6 +135,7 @@ export const projects: Project[] = [
     ],
     links: {
       github: "https://github.com/Sunilvishyt/DocuMind-AI",
+      demo: "https://documind.sunilvishwakarma.dev/",
     },
   },
   {
@@ -152,7 +153,7 @@ export const projects: Project[] = [
     ],
     links: {
       github: "https://github.com/Sunilvishyt/vibetube/",
-      demo: "https://vibetubefrontend.vercel.app/",
+      demo: "https://vibetube.sunilvishwakarma.dev/",
     },
   },
 ];
