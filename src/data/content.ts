@@ -1,5 +1,4 @@
 import type { ComponentType } from "react";
-// import { Mail } from "lucide-react";
 import {
   GithubLogoIcon,
   InstagramLogoIcon,
@@ -157,6 +156,8 @@ export const projects: Project[] = [
     },
   },
 ];
+
+export const resumeLink = "https://drive.google.com/file/d/1-peo2PlbMEFrhItrDWJ3ofuKbbGdE_rH/view?usp=drive_link"
 
 export const socialLinks: SocialLink[] = [
   {

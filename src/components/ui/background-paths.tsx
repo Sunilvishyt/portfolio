@@ -5,7 +5,7 @@ import { useMemo } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import ShinyText from "./shiny-text";
-import { heroContent } from "@/data/content";
+import { heroContent, resumeLink } from "@/data/content";
 import ShimmerButton from "./shimmer-button";
 import { CircleArrowDown } from "lucide-react";
 
@@ -117,7 +117,7 @@ export function BackgroundPaths() {
               </div>
               <ShimmerButton
                 text="Download Resume"
-                href="https://drive.google.com/file/d/1Chp_0UP7N3h62wLMHi9nIZO9lsJB_zRT/view?usp=drivesdk"
+                href={resumeLink}
                 icon={CircleArrowDown}
               />
             </div>
